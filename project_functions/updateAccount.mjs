@@ -32,7 +32,6 @@ export default function updateAccount() {
             fs.rename(`accounts/${accountName}.json`, `accounts/${newAccountName}.json`, (error) => {
               if (error) {
                 console.log(error);
-                return;
               } else {
                 console.log(`O arquivo ${accountName} foi renomeado para ${newAccountName}.`);
                 return operation();
