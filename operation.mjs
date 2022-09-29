@@ -5,6 +5,12 @@ import inquirer from 'inquirer';
 // módulos internos
 import fs from 'fs';
 
+// funções do sistema
+
+import createAccount from './createAccount.mjs';
+
+// funções do sistema 
+
 export default function operation() {
   inquirer.prompt([
     {
@@ -24,7 +30,7 @@ export default function operation() {
       const action = choice['action'];
       switch (action) {
         case "Criar conta.":
-          console.log("Olá, mundo!!!")
+          createAccount();
           break;
         case "Consultar saldo.":
           console.log("Olá, mundo!!!")
