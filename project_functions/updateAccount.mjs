@@ -33,7 +33,7 @@ export default function updateAccount() {
               if (error) {
                 console.log(error);
               } else {
-                console.log(`O arquivo ${accountName} foi renomeado para ${newAccountName}.`);
+                console.log(`A conta ${accountName} foi renomeada para ${newAccountName}.`);
                 return operation();
               }
             });
