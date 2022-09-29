@@ -2,9 +2,6 @@
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 
-// módulos internos
-import fs from 'fs';
-
 // funções do sistema
 import checkAccount from './checkAccount.mjs';
 import getAccount from './getAccount.mjs';

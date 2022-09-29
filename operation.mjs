@@ -2,13 +2,11 @@
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 
-// módulos internos
-import fs from 'fs';
-
 // funções do sistema
 import createAccount from './createAccount.mjs';
 import deposit from './deposit.mjs';
 import getAccountBalance from './getAccountBalance.mjs';
+import withDraw from './withDraw.mjs';
 
 export default function operation() {
   inquirer.prompt([
@@ -38,7 +36,7 @@ export default function operation() {
           deposit();
           break;
         case "Sacar.":
-          console.log("Olá, mundo!!!")
+          withDraw();
           break;
         case "Sair.":
           console.log(chalk.bgBlue.black("Obrigado por usar o Accounts!"));

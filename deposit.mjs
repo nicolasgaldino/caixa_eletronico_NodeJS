@@ -1,9 +1,6 @@
 // módulos externos
 import inquirer from 'inquirer';
 
-// módulos internos
-import fs from 'fs';
-
 // funções do sistema
 import checkAccount from './checkAccount.mjs';
 import addAmount from './addAmount.mjs';
