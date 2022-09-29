@@ -7,6 +7,7 @@ import createAccount from './createAccount.mjs';
 import deposit from './deposit.mjs';
 import getAccountBalance from './getAccountBalance.mjs';
 import withDraw from './withDraw.mjs';
+import removeAccount from './removeAccount.mjs';
 
 export default function operation() {
   inquirer.prompt([
@@ -19,6 +20,7 @@ export default function operation() {
         "Consultar saldo.",
         "Depositar.",
         "Sacar.",
+        "Excluir conta.",
         "Sair."
       ]
     },
@@ -37,6 +39,9 @@ export default function operation() {
           break;
         case "Sacar.":
           withDraw();
+          break;
+        case "Excluir conta.":
+          removeAccount();
           break;
         case "Sair.":
           console.log(chalk.bgBlue.black("Obrigado por usar o Accounts!"));
