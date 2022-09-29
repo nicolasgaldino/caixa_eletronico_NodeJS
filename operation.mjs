@@ -8,6 +8,7 @@ import fs from 'fs';
 // funções do sistema
 
 import createAccount from './createAccount.mjs';
+import deposit from './deposit.mjs';
 
 // funções do sistema 
 
@@ -36,7 +37,7 @@ export default function operation() {
           console.log("Olá, mundo!!!")
           break;
         case "Depositar.":
-          console.log("Olá, mundo!!!")
+          deposit();
           break;
         case "Sacar.":
           console.log("Olá, mundo!!!")
