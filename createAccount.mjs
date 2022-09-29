@@ -9,8 +9,6 @@ import fs from 'fs';
 import operation from './operation.mjs';
 
 export default function createAccount() {
-  console.log(chalk.bgGreen.black("Obrigado por escolher nosso banco."));
-  console.log(chalk.green("Siga as intruções abaixo."));
   inquirer.prompt([
     {
       name: "accountName",
@@ -24,7 +22,7 @@ export default function createAccount() {
         fs.mkdirSync("accounts");
       };
       if (fs.existsSync(`accounts/${accountName}.json`)) {
-        console.log(chalk.bgRed.black("Esta cpnta já existe, por favor informe um nome diferente."));
+        console.log(chalk.bgRed.black("Esta conta já existe, por favor informe um nome diferente."));
         return createAccount();
       };
       fs.writeFileSync(`accounts/${accountName}.json`, '{"balance": 0}', (error) => { console.log(error) });

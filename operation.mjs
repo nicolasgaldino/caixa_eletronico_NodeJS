@@ -6,11 +6,9 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 
 // funções do sistema
-
 import createAccount from './createAccount.mjs';
 import deposit from './deposit.mjs';
-
-// funções do sistema 
+import getAccountBalance from './getAccountBalance.mjs';
 
 export default function operation() {
   inquirer.prompt([
@@ -34,7 +32,7 @@ export default function operation() {
           createAccount();
           break;
         case "Consultar saldo.":
-          console.log("Olá, mundo!!!")
+          getAccountBalance();
           break;
         case "Depositar.":
           deposit();
